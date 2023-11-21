@@ -1,0 +1,74 @@
+@color: rgb(134, 46, 116);
+@colortone1: @color + 60;
+@colortone2: @colortone1 + 10;
+
+@main-div: main;
+@header: header;
+@sidebar: sidebar;
+@footer: footer;
+
+@photo-class: photo;
+@photo-size: 150px;
+
+@bg: background-color;
+@default: 15px;
+
+@sidebar-padding: 40px;
+
+@fsize: 24px;
+@text: rgb(5, 5, 5);
+
+@p-right: padding-right;
+@a-items: align-items;
+
+@w: width;
+@h: height;
+
+@t-decor: text-decoration;
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.@{header} {
+    @{bg}: @color;
+    padding: @default;
+    color: @text;
+    text-align: center;
+}
+
+.@{footer} {
+    @{bg}: @colortone1;
+    color: @text;
+    padding: @default * 2;
+}
+
+.@{photo-class} img {
+    @{h}: @photo-size;
+    display: block;
+    @{p-right}: @default * 2;
+}
+
+.@{photo-class} {
+    padding: @default * 4;
+    font-size: @fsize;
+    display: flex; 
+    @{a-items}: center;
+}
+
+.@{sidebar} {
+    float: left;
+    @{w}: 250px;
+    @{h}: 100%;
+    @{bg}: @colortone2;
+}
+
+.@{sidebar} h4 {
+    color: @text;
+    margin-bottom: 10px;
+    padding: @sidebar-padding;
+}
+
+.@{main-div} {
+    @{h}: 30vh;
+}
